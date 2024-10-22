@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV Summary Generator
 
-## Getting Started
+CV Summary Generator is an AI-powered tool that creates concise summaries from CV/resume text using Groq's language model.
 
-First, run the development server:
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Getting a Groq API Key](#getting-a-groq-api-key)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- AI-powered CV summarization
+- Real-time streaming of generated summaries
+- User-friendly interface built with Next.js and shadcn/ui
+- Responsive design for various screen sizes
+
+## Prerequisites
+
+- Node.js (v20.17.0 or later recommended)
+- pnpm (v8 or later)
+- Groq API key
+
+## Installation
+
+1. Clone the repository:
+
+
+2. Install dependencies:
+**IMPORTANT**: This project uses Next.js 15 and React 19, which may break some Shadcn dependencies. Always use pnpm for package management to ensure compatibility.
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up environment variables:
+Create a `.env.local` file in the root directory and add your Groq API key:
 
-## Learn More
+4. Open your browser and navigate to `http://localhost:3000`
 
-To learn more about Next.js, take a look at the following resources:
+5. Paste your CV text into the input field and click "Generate Summary" to see the AI-generated summary.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/app`: Next.js app router pages and layouts
+- `/components`: React components, including UI components from shadcn/ui
+- `/public`: Static assets
+- `/styles`: Global styles and Tailwind CSS configuration
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Groq API (via LangChain)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Getting a Groq API Key
+
+To use the CV Summary Generator, you'll need a Groq API key. Follow these steps to obtain one:
+
+1. Visit the Groq website at [https://www.groq.com/](https://www.groq.com/).
+2. Click on the "Sign Up" or "Get Started" button to create an account.
+3. Complete the registration process by providing the required information.
+4. Once your account is created and verified, log in to your Groq dashboard.
+5. Navigate to the API section or look for an option to generate an API key.
+6. Create a new API key and copy it.
+7. Paste the API key into your `.env.local` file as shown in the Installation section.
+
+
+```plaintext
+GROQ_API_KEY=your_api_key_here
+
+```
+
+**Note**: Keep your API key confidential and do not share it publicly. If you're deploying the application, make sure to use environment variables or secrets management to securely store your API key.
+
+## Usage
+
+1. Start the development server:
+
+
+```bash
+pnpm dev
+```

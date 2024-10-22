@@ -1,0 +1,11 @@
+# Ignore all files in the components/ui directory
+components/ui/*
+
+# Ignore specific problematic files
+
+
+# Ignore build output directory
+.next
+
+# Ignore node_modules
+node_modules
