@@ -8,7 +8,7 @@ import { RunnableSequence } from "@langchain/core/runnables"
 const groq = new ChatGroq({
   apiKey: process.env.GROQ_API_KEY,
   model: "llama3-8b-8192",
-  temperature: 1,
+  temperature: 0.2,
   maxTokens: 1024,
 })
 
@@ -38,7 +38,7 @@ const chain = RunnableSequence.from([
 ])
 
 export async function generateCVSummary(cv: string): Promise<ReadableStream<Uint8Array>> {
-  console.log("Generating CV summary for:", cv.substring(0, 100) + "...")
+  console.log("Generating CV summary for:", cv.substring(0, 200) + "...")
   
   try {
     const stream = await chain.stream({
